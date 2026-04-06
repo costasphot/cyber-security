@@ -1,0 +1,12 @@
+# .gitignore
+
+# Debug files
+*.out
+*.exe
+
+# Build directories
+build/
+bin/
+
+# IDE
+.vscode
