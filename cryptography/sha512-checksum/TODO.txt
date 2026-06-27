@@ -1,0 +1,1 @@
+Be able to upload and compare the .sha512 files themselves.
