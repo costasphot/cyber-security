@@ -1,0 +1,60 @@
+/**
+ * css/style.css
+ * 
+ * Full Name: George Constantine Fotopoulos
+ * R.N.: 1117202200234
+ */
+
+body {
+  margin: 16px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+form {
+  width: 360px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+input, button {
+  font-size: inherit;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  max-width: 260px;
+}
+
+button {
+  margin-top: 12px;
+  margin-right: 8px;
+}
+
+.message-area {
+  margin-bottom: 16px;
+}
+
+.message-area p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.result-item {
+  margin-bottom: 20px;
+}
+
+.product-table {
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.product-table th, .product-table td {
+  border: 1px solid black;
+  padding: 6px 10px;
+  text-align: left;
+}
