@@ -31,8 +31,8 @@ CREATE TABLE Product (
 
 INSERT INTO Users (username, password)
 VALUES
-  ("Mort",   "pizza"),
-  ("Bob",    "bob123"),
+  ("mort",   "pizza"),
+  ("bob",    "bob123"),
   ("admin",  "admin");
 
 INSERT INTO Product (product_name, price)
