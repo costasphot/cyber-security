@@ -50,6 +50,10 @@
       <button type="submit" formaction="multi_statement_login.php">
         Multi-Statement Demo
       </button>
+
+      <button type="submit" formaction="safe_login.php">
+        Safe Login
+      </button>
     </form>
   </body>
 </html>
