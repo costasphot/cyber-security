@@ -49,6 +49,21 @@
   }
 
   $user = pg_fetch_assoc($result);
+
+  $products_result = false;
+
+  if ($user !== false) {
+    $products_query =
+        "SELECT product_id, product_name, price " .
+        "FROM " . TABLE_PRODUCT . " " .
+        "ORDER BY product_id";
+
+    $products_result = pg_query($connection, $products_query);
+
+    if ($products_result === false) {
+      die("[Error] The products query failed.");
+    }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -79,6 +94,26 @@
         <p>Access granted.</p>
         <p>Authenticated user: <?php echo EscapeHtml($user["username"]); ?></p>
       </div>
+
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <?php while (($product = pg_fetch_assoc($products_result)) !== false): ?>
+            <tr>
+              <td><?php echo EscapeHtml($product["product_id"]); ?></td>
+              <td><?php echo EscapeHtml($product["product_name"]); ?></td>
+              <td><?php echo EscapeHtml($product["price"]); ?></td>
+            </tr>
+          <?php endwhile; ?>
+        </tbody>
+      </table>
     <?php endif; ?>
 
     <p>
