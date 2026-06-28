@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <script src="login_validation.js"></script>
+    <script src="js/login_validation.js"></script>
   </head>
 
   <!-- Body -->
@@ -43,7 +43,13 @@
 
       <br>
 
-      <button type="submit" name="login" value="1">Login</button>
+      <button type="submit" formaction="vulnerable_login.php">
+        Vulnerable Login
+      </button>
+
+      <button type="submit" formaction="multi_statement_login.php">
+        Multi-Statement Demo
+      </button>
     </form>
   </body>
 </html>
